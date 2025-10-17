@@ -148,7 +148,7 @@ function App() {
       category: "Web Design",
       cover: project1,
       figmaFile:
-        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=0-1&p=f&t=j9sPf8CqeyANaf1h-0",
+        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=0-1&t=j9sPf8CqeyANaf1h-1",
     },
     {
       title: "Winery",
@@ -157,7 +157,7 @@ function App() {
       category: "Web Design",
       cover: project2,
       figmaFile:
-        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=0-1&p=f&t=j9sPf8CqeyANaf1h-0",
+        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=0-1&t=j9sPf8CqeyANaf1h-1",
     },
     {
       title: "Movie Mobile App",
@@ -166,7 +166,7 @@ function App() {
       category: "Mobile App Design",
       cover: project3,
       figmaFile:
-        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=761-164&p=f&t=4n50yeAMgFmKyi2n-0",
+        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=761-164&t=j9sPf8CqeyANaf1h-1",
     },
     {
       title: "Apartment Web App",
@@ -174,7 +174,7 @@ function App() {
         "Designed a modern and visually appealing apartment website, focusing on clean layouts and elegant presentation of listings",
       category: "Website Design",
       cover: project4,
-      figmaFile: "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=289-144&p=f&t=4n50yeAMgFmKyi2n-0",
+      figmaFile: "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=289-144&t=j9sPf8CqeyANaf1h-1",
     },
   ];
 
