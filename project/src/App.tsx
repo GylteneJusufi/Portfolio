@@ -21,9 +21,13 @@ import {
   Book,
   MapPin,
 } from "lucide-react";
+import project1 from "./Frame 9.png"
+import project2 from "./project2.png"
+import project3 from "./proj3.avif"
+import project4 from "./project4.png"
+
 import g from "./g-image.jpeg";
 
-/* ----------------------------- Modal (Portal) ----------------------------- */
 type ModalProps = {
   open: boolean;
   onClose: () => void;
@@ -55,12 +59,11 @@ function Modal({ open, onClose, children }: ModalProps) {
   );
 }
 
-/* --------------------------- Figma Embed (iframe) ------------------------- */
 type FigmaEmbedProps = {
-  url: string; // full figma URL (proto or file)
+  url: string; 
   title?: string;
   theme?: "dark" | "light";
-  ratio?: string; // "62.5%" (16:10) | "56.25%" (16:9)
+  ratio?: string; 
 };
 
 function FigmaEmbed({
@@ -98,7 +101,6 @@ function App() {
   );
   const [isDark, setIsDark] = useState<boolean>(true);
 
-  // Modal state for viewing a prototype
   const [openProto, setOpenProto] = useState<boolean>(false);
   const [protoUrl, setProtoUrl] = useState<string>("");
 
@@ -132,62 +134,47 @@ function App() {
     },
   ];
 
-  // Replace with your real links; put cover images in /public/covers/
   const projects: Array<{
     title: string;
     description: string;
     category: string;
     cover: string;
     figmaFile?: string;
-    figmaProto?: string;
-    tags: string[];
   }> = [
     {
-      title: "Banking App Redesign",
+      title: "Cyber Solutions Website",
       description:
-        "Complete UX overhaul of a digital banking platform, increasing user satisfaction by 47% and reducing task time by 35%.",
-      category: "Mobile App",
-      cover: "/covers/banking.jpg",
-      figmaFile:
-        "https://www.figma.com/file/XXXXXXXX/Banking-UI?type=design&node-id=0-1",
-      figmaProto:
-        "https://www.figma.com/proto/XXXXXXXX/Banking-UI?node-id=0-1&scaling=scale-down-width",
-      tags: ["UI/UX", "Mobile", "Fintech"],
-    },
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Designed an intuitive shopping experience with personalized recommendations, +28% conversion rate.",
+        "Crafted a sleek and modern UI design for a cyber solutions website, enhancing visual clarity and user experience.",
       category: "Web Design",
-      cover: "/covers/ecommerce.jpg",
+      cover: project1,
       figmaFile:
-        "https://www.figma.com/file/YYYYYYYY/Ecom?type=design&node-id=0-1",
-      figmaProto:
-        "https://www.figma.com/proto/YYYYYYYY/Ecom?node-id=0-1&scaling=scale-down-width",
-      tags: ["UI/UX", "Web", "E-commerce"],
+        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=0-1&p=f&t=j9sPf8CqeyANaf1h-0",
     },
     {
-      title: "Health & Wellness Dashboard",
+      title: "Winery",
       description:
-        "Comprehensive health tracking with data viz and personalized insights.",
-      category: "Dashboard",
-      cover: "/covers/health.jpg",
+        "Designed a visually engaging UI for Weine Design, focusing on clean aesthetics and intuitive user experience",
+      category: "Web Design",
+      cover: project2,
       figmaFile:
-        "https://www.figma.com/file/ZZZZZZZZ/Health?type=design&node-id=0-1",
-      figmaProto:
-        "https://www.figma.com/proto/ZZZZZZZZ/Health?node-id=0-1&scaling=scale-down-width",
-      tags: ["UI/UX", "Data Viz", "Healthcare"],
+        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=0-1&p=f&t=j9sPf8CqeyANaf1h-0",
     },
     {
-      title: "Design System",
+      title: "Movie Mobile App",
       description:
-        "Scalable DS with 200+ components for faster and consistent product development.",
-      category: "System",
-      cover: "/covers/design-system.jpg",
-      figmaFile: "https://www.figma.com/file/AAAAAAAA/DS?type=design&node-id=0-1",
-      figmaProto:
-        "https://www.figma.com/proto/AAAAAAAA/DS?node-id=0-1&scaling=scale-down-width",
-      tags: ["Design System", "Components", "Documentation"],
+        "Created a clean and modern visual design for a mobile app, emphasizing aesthetics and cohesive branding",
+      category: "Mobile App Design",
+      cover: project3,
+      figmaFile:
+        "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=761-164&p=f&t=4n50yeAMgFmKyi2n-0",
+    },
+    {
+      title: "Apartment Web App",
+      description:
+        "Designed a modern and visually appealing apartment website, focusing on clean layouts and elegant presentation of listings",
+      category: "Website Design",
+      cover: project4,
+      figmaFile: "https://www.figma.com/design/TDdtx7uAMI784Vd7ReAEUZ/Untitled?node-id=289-144&p=f&t=4n50yeAMgFmKyi2n-0",
     },
   ];
 
@@ -208,7 +195,6 @@ function App() {
         isDark ? "bg-slate-950 text-white" : "bg-slate-50 text-slate-900"
       }`}
     >
-      {/* Animated background gradient */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div
           className={`absolute w-96 h-96 rounded-full blur-3xl transition-all duration-1000 ${
@@ -231,7 +217,6 @@ function App() {
         />
       </div>
 
-      {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled
@@ -247,7 +232,7 @@ function App() {
               Portfolio
             </div>
 
-            {/* Desktop Menu */}
+           
             <div className="hidden md:flex items-center space-x-4">
               {["About", "Work", "Skills", "Contact"].map((item) => (
                 <button
@@ -283,7 +268,7 @@ function App() {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
+         
             <div className="md:hidden flex items-center space-x-2">
               <button
                 onClick={() => setIsDark(!isDark)}
@@ -302,7 +287,7 @@ function App() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+      
         {isMenuOpen && (
           <div
             className={`md:hidden backdrop-blur-xl border-t ${
@@ -330,7 +315,6 @@ function App() {
         )}
       </nav>
 
-      {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 lg:px-8 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -363,8 +347,7 @@ function App() {
                   isDark ? "text-slate-400" : "text-slate-600"
                 }`}
               >
-                Crafting beautiful, intuitive digital experiences that blend
-                aesthetic excellence with functional design.
+                Designing elegant, user-centered digital experiences that unite visual excellence with seamless functionality
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -388,7 +371,7 @@ function App() {
               </div>
             </div>
 
-            {/* Profile Image (Bigger Circle) */}
+        
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
                 <div
@@ -418,7 +401,6 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
       <section
         id="about"
         className={`relative py-32 px-6 lg:px-8 ${isDark ? "" : "bg-white"}`}
@@ -461,7 +443,6 @@ function App() {
               </div>
             </div>
 
-            {/* Right column cards + CV */}
             <div className="relative">
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Personal Info */}
@@ -501,7 +482,6 @@ function App() {
                   </ul>
                 </div>
 
-                {/* Experience */}
                 <div
                   className={`backdrop-blur-sm rounded-2xl p-6 border shadow-sm ${
                     isDark ? "bg-white/5 border-white/10" : "bg-white border-slate-200"
@@ -530,9 +510,7 @@ function App() {
                 </div>
               </div>
 
-              {/* CV Buttons */}
               <div className="mt-12 flex flex-wrap gap-3">
-                {/* Put your PDF at /public/cv/GylteneJusufi-CV.pdf */}
                 <a
                   href="/GylteneJusufi-CV.pdf"
                   target="_blank"
@@ -556,7 +534,6 @@ function App() {
         </div>
       </section>
 
-      {/* Work Section (Figma integrated) */}
       <section id="work" className="relative py-32 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -574,12 +551,11 @@ function App() {
                 isDark ? "text-slate-400" : "text-slate-600"
               }`}
             >
-              Live Figma prototypes embedded directly—click any “View
-              Prototype”.
+              See the designs come to life — open them in Figma.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -632,7 +608,7 @@ function App() {
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  {/* <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -645,10 +621,10 @@ function App() {
                         {tag}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
 
                   <div className="flex flex-wrap gap-3">
-                    {project.figmaProto && (
+                    {/* {project.figmaProto && (
                       <button
                         onClick={() => openFigmaProto(project.figmaProto!)}
                         className="group inline-flex items-center space-x-2 px-4 py-2 rounded-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:shadow-lg hover:shadow-cyan-500/40 transition-all"
@@ -656,7 +632,7 @@ function App() {
                         <span>View Prototype</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
-                    )}
+                    )} */}
                     {project.figmaFile && (
                       <a
                         href={project.figmaFile}
@@ -664,7 +640,7 @@ function App() {
                         rel="noreferrer"
                         className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full ${
                           isDark
-                            ? "bg-white/5 border border-white/10 hover:bg-white/10"
+                            ? "bg-gradient-to-r from-cyan-500 to-blue-500 border border-white/10 hover:bg-white/10"
                             : "bg-white border border-slate-200 hover:bg-slate-50"
                         } transition-colors`}
                       >
